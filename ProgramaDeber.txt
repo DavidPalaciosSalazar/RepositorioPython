@@ -1,0 +1,8 @@
+print ('Lista de numeros primos')
+
+def numeros_primos(a):
+  return ([2] + [x for x in range(3, a+1, 2) 
+  if not [y for y in range(3, int(x**0.5)+1, 2) 
+  if (float(x) / y).is_integer()]]) if a >= 2 else []
+
+print(numeros_primos(50))
